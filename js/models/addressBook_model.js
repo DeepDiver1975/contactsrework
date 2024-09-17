@@ -44,14 +44,14 @@ angular.module('contactsApp')
 
 				if (href.startsWith('principal:principals/users/')) {
 					this.sharedWith.users.push({
-						id: href.substr(27),
-						displayname: href.substr(27),
+						id: href.slice(27),
+						displayname: href.slice(27),
 						writable: readWrite
 					});
 				} else if (href.startsWith('principal:principals/groups/')) {
 					this.sharedWith.groups.push({
-						id: href.substr(28),
-						displayname: href.substr(28),
+						id: href.slice(28),
+						displayname: href.slice(28),
 						writable: readWrite
 					});
 				}
@@ -62,7 +62,7 @@ angular.module('contactsApp')
 		//if (typeof owner !== 'undefined' && owner.length !== 0) {
 		//	owner = owner.trim();
 		//	if (owner.startsWith('/remote.php/dav/principals/users/')) {
-		//		this._properties.owner = owner.substr(33);
+		//		this._properties.owner = owner.slice(33);
 		//	}
 		//}
 
